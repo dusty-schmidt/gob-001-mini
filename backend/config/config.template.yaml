@@ -1,5 +1,5 @@
-# The Nothing App - Configuration
-# This file contains the runtime configuration for the agent system
+# The Nothing App - Configuration Template
+# Copy this file to the project root as 'config.yaml' and customize as needed
 
 # API Configuration
 api:
@@ -26,11 +26,11 @@ models:
   personas:
     developer:
       model: "openai/gpt-4"
-      temperature: 0.2
+      temperature: 0.2  # Lower temperature for precise code generation
       max_tokens: 2000
     creative:
       model: "openai/gpt-4"
-      temperature: 0.8
+      temperature: 0.8  # Higher temperature for creative tasks
       max_tokens: 1500
 
   # Universal agents available to all personas
@@ -46,7 +46,7 @@ models:
     embedding:
       model: "text-embedding-ada-002"
 
-  # Fallback models (free alternatives)
+  # Fallback models (free alternatives when API credits are exhausted)
   fallbacks:
     main_fallback:
       model: "meta-llama/llama-3.2-3b-instruct:free"
@@ -107,7 +107,7 @@ agents:
 system:
   max_conversation_history: 20
   max_session_memory: 20
-  log_level: "INFO"
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
   log_agent_routing: true
   log_model_usage: true
   enable_streaming: false
