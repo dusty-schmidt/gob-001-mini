@@ -67,6 +67,9 @@ build/
 logs/
 *.log
 
+# Exception: Allow work log
+!logs/work.logs.md
+
 # Runtime data
 pids/
 *.pid
