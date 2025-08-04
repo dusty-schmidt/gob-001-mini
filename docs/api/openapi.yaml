@@ -1,0 +1,26 @@
+openapi: 3.0.3
+info:
+  title: Modular AI Framework API
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080/api/v1
+paths:
+  /tasks:
+    post:
+      summary: Create a task
+      responses: {"201": {"description": "Created"}}
+    get:
+      summary: List tasks
+      responses: {"200": {"description": "OK"}}
+  /behavior/adjust:
+    post:
+      summary: Adjust behavior rules
+      responses: {"200": {"description": "OK"}}
+  /memory/save:
+    post:
+      summary: Save memory item
+      responses: {"200": {"description": "OK"}}
+  /memory/query:
+    get:
+      summary: Query memory
+      responses: {"200": {"description": "OK"}}
